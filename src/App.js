@@ -1,5 +1,11 @@
 import "./App.css";
-
+import Navbar from "./copmonent/Navbar";
+import Slider from "./copmonent/Slider";
 export default function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <>
+      <Navbar />
+      <Slider />
+    </>
+  );
 }
