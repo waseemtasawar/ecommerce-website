@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import logo from "../Images/logo.png";
 import {
   faSearch,
   faHeart,
@@ -13,15 +14,10 @@ function Navbar() {
   return (
     <nav className="bg-white-600 p-4">
       <div className="container mx-auto flex justify-between items-center">
-        <div className=" flex items-center space-x-4">
+        <div className=" flex items-center  space-x-20">
           {/* Logo Image */}
           <a href="/" className="flex items-center">
-            <img src="/path/to/logo.png" alt="Logo" className="h-8 mr-3" />{" "}
-            {/* Adjust the path and size as needed */}
-            <span className="font-bold  text-lg hidden md:block">
-              Company Name
-            </span>{" "}
-            {/* Optional: Text next to the logo */}
+            <img src={logo} alt="Logo" className="h-8 mr-3" />
           </a>
           <button onClick={() => setIsOpen(!isOpen)} className=" md:hidden">
             <FontAwesomeIcon icon={faBars} />
@@ -37,6 +33,9 @@ function Navbar() {
           </a>
           <a href="#" className=" text-lg hidden md:block">
             Shop
+          </a>
+          <a href="#" className=" text-lg hidden md:block">
+            contact us
           </a>
         </div>
         <div className="flex items-center space-x-4">
@@ -70,6 +69,9 @@ function Navbar() {
           </a>
           <a href="#" className=" text-lg">
             Shop
+          </a>
+          <a href="#" className=" text-lg">
+            contact us
           </a>
         </div>
       )}
