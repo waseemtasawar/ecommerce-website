@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import image1 from "../Images/slider1.png";
 import image2 from "../Images/slider2.png";
+import image3 from "../Images/slider2.png";
 
 const images = [
   {
@@ -13,6 +14,13 @@ const images = [
   {
     id: 2,
     src: image2,
+    title: "Prada",
+    subtitle: "Summer Collection",
+    discount: "Up to 70% off",
+  },
+  {
+    id: 3,
+    src: image3,
     title: "Prada",
     subtitle: "Summer Collection",
     discount: "Up to 70% off",
@@ -42,7 +50,7 @@ const Slider = () => {
               : "slide hidden"
           }
           key={slide.id}
-          style={{ height: "80vh" }} // Ensures each slide takes only the viewport height
+          style={{ height: "80vh" }}
         >
           {index === current && (
             <div className="w-full h-500 relative">
