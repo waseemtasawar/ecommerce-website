@@ -96,7 +96,7 @@ const products = [
 
 const ProductSlider = () => {
   const [current, setCurrent] = useState(0);
-  const visibleCount = 5; // Show five products per slide
+  const visibleCount = 5;
   const totalSlides = Math.ceil(products.length / visibleCount);
 
   const nextSlide = () => {
