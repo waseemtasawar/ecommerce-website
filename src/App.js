@@ -3,6 +3,7 @@ import Navbar from "./copmonent/Navbar";
 import Slider from "./copmonent/Slider";
 import ProductSlider from "./copmonent/products";
 import ProductSliderDeal from "./copmonent/ProductSliderDeal";
+import TrendingOffersSlider from "./copmonent/TrendingOffersSlider";
 export default function App() {
   return (
     <>
@@ -10,6 +11,7 @@ export default function App() {
       <Slider />
       <ProductSlider />
       <ProductSliderDeal />
+      <TrendingOffersSlider />
     </>
   );
 }
