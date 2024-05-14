@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.slick-slide {
+  padding: 10px; /* Adds padding around each slide for better spacing */
+}
+
+.ad-card {
+  max-width: 300px; /* Limits the width of each advertisement card */
+}
