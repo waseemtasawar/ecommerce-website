@@ -1,15 +1,15 @@
 import React from "react";
 
-const ProductCardDeal = ({ image, title, priceLabel, price, logo }) => {
+const ProductCardDeal = ({ imageSrc, title, price, logoSrc }) => {
   return (
-    <div className="p-4 rounded overflow-hidden shadow-lg bg-white">
-      <img className="w-full h-48 object-cover" src={image} alt={title} />
-      <div className="p-4 text-center">
-        <img src={logo} alt="Brand Logo" className="mx-auto h-6 mb-2" />
-        <div className="text-lg font-bold">{title}</div>
-        <div className="text-sm">
-          {priceLabel} {price}
-        </div>
+    <div className="max-w-sm rounded overflow-hidden shadow-lg">
+      <img src={imageSrc} alt={title} className="w-full" />
+      <div className="px-6 py-4">
+        <div className="font-bold text-xl mb-2">{title}</div>
+        <p className="text-gray-700 text-base">{price}</p>
+      </div>
+      <div className="px-6 pt-4 pb-2">
+        <img src={logoSrc} alt="Brand Logo" className="mx-auto h-10" />
       </div>
     </div>
   );

@@ -6,34 +6,11 @@ import forever21Logo from "../Images/forever21.png";
 import t1 from "../Images/t1.png";
 import t2 from "../Images/t2.png";
 import t3 from "../Images/t3.png";
-// import t4 from "../Images/t4.png";
-// import t5 from "../Images/t5.png";
-// import t6 from "../Images/t6.png";
-// import t7 from "../Images/t7.png";
-// import t8 from "../Images/t8.png";
-
-// Custom Arrow components
-function NextArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "blue" }}
-      onClick={onClick}
-    />
-  );
-}
-
-function PrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "red" }}
-      onClick={onClick}
-    />
-  );
-}
+import t4 from "../Images/t4.png";
+import t5 from "../Images/t5.png";
+import t6 from "../Images/t6.png";
+import t7 from "../Images/t7.png";
+import t8 from "../Images/t8.png";
 
 const TrendingOffersSlider = () => {
   const settings = {
@@ -42,8 +19,6 @@ const TrendingOffersSlider = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
     autoplay: true, // Enable autoplay
     autoplaySpeed: 3000, // Set autoplay speed in milliseconds
     responsive: [
@@ -68,7 +43,7 @@ const TrendingOffersSlider = () => {
 
   return (
     <div className="px-4 py-8">
-      <h2 className="text-center text-2xl font-bold mb-6">Trending Offers</h2>
+      <h2 className="text-2xl font-bold my-4">Trending Offers</h2>
       <Slider {...settings}>
         <AdCard
           logo={forever21Logo}
@@ -89,6 +64,41 @@ const TrendingOffersSlider = () => {
           offerText="Min 50% off"
           buttonText="Explore"
           imageSrc={t3}
+          altText="FOREVER 21 Ad"
+        />
+        <AdCard
+          logo={forever21Logo}
+          offerText="Min 50% off"
+          buttonText="Explore"
+          imageSrc={t4}
+          altText="FOREVER 21 Ad"
+        />
+        <AdCard
+          logo={forever21Logo}
+          offerText="Min 50% off"
+          buttonText="Explore"
+          imageSrc={t5}
+          altText="FOREVER 21 Ad"
+        />
+        <AdCard
+          logo={forever21Logo}
+          offerText="Min 50% off"
+          buttonText="Explore"
+          imageSrc={t6}
+          altText="FOREVER 21 Ad"
+        />
+        <AdCard
+          logo={forever21Logo}
+          offerText="Min 50% off"
+          buttonText="Explore"
+          imageSrc={t7}
+          altText="FOREVER 21 Ad"
+        />
+        <AdCard
+          logo={forever21Logo}
+          offerText="Min 50% off"
+          buttonText="Explore"
+          imageSrc={t8}
           altText="FOREVER 21 Ad"
         />
       </Slider>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import Slider from "react-slick";
 import ProductCardDeal from "./ProductCardDeal";
 import brandLogo from "../Images/brandlogo.png";
 import t1 from "../Images/t1.png";
@@ -10,129 +10,92 @@ import t6 from "../Images/t6.png";
 import t7 from "../Images/t7.png";
 import t8 from "../Images/t8.png";
 import t9 from "../Images/t9.png";
-const products = [
-  {
-    id: 1,
-    image: t1,
-    title: "Best of Styles",
-    priceLabel: "Under",
-    price: "Rs.799",
-    logo: brandLogo,
-  },
-  {
-    id: 2,
-    image: t2,
-    title: "Best of Styles",
-    priceLabel: "Under",
-    price: "Rs.799",
-    logo: brandLogo,
-  },
-  {
-    id: 3,
-    image: t3,
-    title: "Best of Styles",
-    priceLabel: "Under",
-    price: "Rs.799",
-    logo: brandLogo,
-  },
-  {
-    id: 4,
-    image: t4,
-    title: "Best of Styles",
-    priceLabel: "Under",
-    price: "Rs.799",
-    logo: brandLogo,
-  },
-  {
-    id: 5,
-    image: t5,
-    title: "Best of Styles",
-    priceLabel: "Under",
-    price: "Rs.799",
-    logo: brandLogo,
-  },
-  {
-    id: 6,
-    image: t6,
-    title: "Best of Styles",
-    priceLabel: "Under",
-    price: "Rs.799",
-    logo: brandLogo,
-  },
-  {
-    id: 7,
-    image: t7,
-    title: "Best of Styles",
-    priceLabel: "Under",
-    price: "Rs.799",
-    logo: brandLogo,
-  },
-  {
-    id: 8,
-    image: t8,
-    title: "Best of Styles",
-    priceLabel: "Under",
-    price: "Rs.799",
-    logo: brandLogo,
-  },
-  {
-    id: 9,
-    image: t9,
-    title: "Best of Styles",
-    priceLabel: "Under",
-    price: "Rs.799",
-    logo: brandLogo,
-  },
-];
-
 const ProductSliderDeal = () => {
-  const [current, setCurrent] = useState(0);
-  const visibleCount = 5;
-  const totalSlides = Math.ceil(products.length / visibleCount);
-
-  const nextSlide = () => {
-    setCurrent(current === totalSlides - 1 ? 0 : current + 1);
-  };
-
-  const prevSlide = () => {
-    setCurrent(current === 0 ? totalSlides - 1 : current - 1);
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
-    <div className="flex flex-col items-center mt-8">
-      <div className="self-start text-2xl font-semibold mb-4">
-        Deals of the Day
-      </div>
-      <div className="relative w-full">
-        <div className="flex overflow-hidden">
-          <div
-            className="flex transition-transform duration-300"
-            style={{ transform: `translateX(-${current * 100}%)` }}
-          >
-            {Array.from({ length: totalSlides }, (_, index) => (
-              <div key={index} className="flex w-full">
-                {products
-                  .slice(index * visibleCount, (index + 1) * visibleCount)
-                  .map((product) => (
-                    <ProductCardDeal key={product.id} {...product} />
-                  ))}
-              </div>
-            ))}
-          </div>
-        </div>
-        <button
-          onClick={prevSlide}
-          className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white p-4"
-        >
-          ‹
-        </button>
-        <button
-          onClick={nextSlide}
-          className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white p-4"
-        >
-          ›
-        </button>
-      </div>
+    <div className="container mx-auto px-4">
+      <h2 className="text-2xl font-bold my-4">Deals of the Day</h2>
+      <Slider {...settings}>
+        <ProductCardDeal
+          imageSrc={t1}
+          title="Best of Styles"
+          price="Under Rs.799"
+          logoSrc={brandLogo}
+        />
+        <ProductCardDeal
+          imageSrc={t2}
+          title="Casual Tees"
+          price="Under Rs.499"
+          logoSrc={brandLogo}
+        />
+        <ProductCardDeal
+          imageSrc={t3}
+          title="Formal Wear"
+          price="Under Rs.999"
+          logoSrc={brandLogo}
+        />
+        <ProductCardDeal
+          imageSrc={t4}
+          title="Winter Collection"
+          price="Under Rs.1299"
+          logoSrc={brandLogo}
+        />
+        <ProductCardDeal
+          imageSrc={t5}
+          title="Winter Collection"
+          price="Under Rs.1299"
+          logoSrc={brandLogo}
+        />
+        <ProductCardDeal
+          imageSrc={t6}
+          title="Winter Collection"
+          price="Under Rs.1299"
+          logoSrc={brandLogo}
+        />
+        <ProductCardDeal
+          imageSrc={t7}
+          title="Winter Collection"
+          price="Under Rs.1299"
+          logoSrc={brandLogo}
+        />
+        <ProductCardDeal
+          imageSrc={t8}
+          title="Winter Collection"
+          price="Under Rs.1299"
+          logoSrc={brandLogo}
+        />
+        <ProductCardDeal
+          imageSrc={t9}
+          title="Winter Collection"
+          price="Under Rs.1299"
+          logoSrc={brandLogo}
+        />
+      </Slider>
     </div>
   );
 };
