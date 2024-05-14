@@ -5,6 +5,7 @@ import ProductSlider from "./copmonent/products";
 import ProductSliderDeal from "./copmonent/ProductSliderDeal";
 import TrendingOffersSlider from "./copmonent/TrendingOffersSlider";
 import PromoBanner from "./copmonent/PromoBanner";
+import CategoryGrid from "./copmonent/CategoryGrid";
 export default function App() {
   return (
     <>
@@ -14,6 +15,7 @@ export default function App() {
       <ProductSliderDeal />
       <TrendingOffersSlider />
       <PromoBanner />
+      <CategoryGrid />
     </>
   );
 }
