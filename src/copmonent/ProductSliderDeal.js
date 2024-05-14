@@ -8,8 +8,6 @@ import t4 from "../Images/t4.png";
 import t5 from "../Images/t5.png";
 import t6 from "../Images/t6.png";
 import t7 from "../Images/t7.png";
-import t8 from "../Images/t8.png";
-import t9 from "../Images/t9.png";
 const ProductSliderDeal = () => {
   const settings = {
     dots: true,
@@ -79,18 +77,6 @@ const ProductSliderDeal = () => {
         />
         <ProductCardDeal
           imageSrc={t7}
-          title="Winter Collection"
-          price="Under Rs.1299"
-          logoSrc={brandLogo}
-        />
-        <ProductCardDeal
-          imageSrc={t8}
-          title="Winter Collection"
-          price="Under Rs.1299"
-          logoSrc={brandLogo}
-        />
-        <ProductCardDeal
-          imageSrc={t9}
           title="Winter Collection"
           price="Under Rs.1299"
           logoSrc={brandLogo}
