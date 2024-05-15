@@ -10,9 +10,6 @@ const BlogCard = ({ image, title, description, author }) => {
           <p className="text-gray-600 mb-3">{description}</p>
           <div className="text-gray-800 text-sm">{author}</div>
         </div>
-        <button className="mt-4 self-start px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300">
-          Explore
-        </button>
       </div>
     </div>
   );

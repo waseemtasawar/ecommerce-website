@@ -43,7 +43,7 @@ const TrendingOffersSlider = () => {
 
   return (
     <div className="px-4 py-8">
-      <h2 className="text-2xl font-bold my-4">Trending Offers</h2>
+      <h2 className="text-2xl font-bold text-center mb-6">Trending Offers</h2>
       <Slider {...settings}>
         <AdCard
           logo={forever21Logo}

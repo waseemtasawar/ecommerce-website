@@ -42,12 +42,17 @@ const FeaturedBlogs = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h2 className="text-2xl font-bold mb-6">Featured Blogs</h2>
+      <h2 className="text-2xl font-bold text-center mb-6">Featured Blogs</h2>
       <Slider {...settings}>
         {blogs.map((blog) => (
           <BlogCard key={blog.id} {...blog} />
         ))}
       </Slider>
+      <div className="text-center mt-8">
+        <button className="px-6 py-2 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600 transition duration-300">
+          View All
+        </button>
+      </div>
     </div>
   );
 };

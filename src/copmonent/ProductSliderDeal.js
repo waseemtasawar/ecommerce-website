@@ -37,7 +37,7 @@ const ProductSliderDeal = () => {
 
   return (
     <div className="container mx-auto px-4">
-      <h2 className="text-2xl font-bold my-4">Deals of the Day</h2>
+      <h2 className="text-2xl font-bold text-center mb-6">Deals of the Day</h2>
       <Slider {...settings}>
         <ProductCardDeal
           imageSrc={t1}
