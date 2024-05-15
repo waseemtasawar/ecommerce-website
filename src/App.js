@@ -7,6 +7,7 @@ import TrendingOffersSlider from "./copmonent/TrendingOffersSlider";
 import PromoSlider from "./copmonent/PromoSlider";
 import CategoryGrid from "./copmonent/CategoryGrid";
 import TestimonialsGrid from "./copmonent/TestimonialsGrid";
+import FeaturedBlogs from "./copmonent/FeaturedBlogs";
 export default function App() {
   return (
     <>
@@ -18,6 +19,7 @@ export default function App() {
       <PromoSlider />
       <CategoryGrid />
       <TestimonialsGrid />
+      <FeaturedBlogs />
     </>
   );
 }
