@@ -33,7 +33,7 @@ const features = [
   },
   {
     id: 5,
-    icon: Offers,
+    icon: Support,
     title: "Best Offers",
     description: "We give best offers to our customers",
   },
